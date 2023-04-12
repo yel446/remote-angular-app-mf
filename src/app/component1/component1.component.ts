@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-component1',
@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./component1.component.scss'],
 })
 export class Component1Component {
-  text: string = ' 😎 Je suis le texte ';
+  @Input() text?: string = ' 😎 Je suis le texte ';
+
   number_value: number = 0;
 
   increase() {
